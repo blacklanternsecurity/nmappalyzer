@@ -121,7 +121,6 @@ class NmapResults(list):
                         with open(str(filename), 'rb') as f:
                             self.etree = etree.parse(f)
                             for host in self.etree.iter('host'):
-                                print(host.attrib)
                                 self.append(NmapHost(host))
                     except Exception as e:
                         log.error(f'Error parsing Nmap XML: {e}')
@@ -151,7 +150,7 @@ class NmapHost(str):
         self.status = self.etree.find('status').attrib.get('state', 'down')
         self.address = self.etree.find('address').attrib.get('addr', '')
         self.hostnames = []
-        for hostname in self.etree.find('hostnames/hostname'):
+        for hostname in self.etree.findall('hostnames/hostname'):
             hostname = hostname.attrib.get('name')
             if hostname and not hostname in self.hostnames:
                 self.hostnames.append(hostname)

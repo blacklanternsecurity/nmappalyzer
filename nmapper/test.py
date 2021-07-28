@@ -2,7 +2,7 @@
 
 import logging
 import unittest
-from main import NmapScan, log
+from .main import NmapScan, log
 logging.getLogger('nmapper').setLevel(logging.DEBUG)
 
 class TestNmapper(unittest.TestCase):
