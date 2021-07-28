@@ -13,12 +13,15 @@ $ pip install nmapper
 ~~~
 
 ## Usage
+1. Start the scan and wait for it to finish
 ~~~
 from nmapper import NmapScan
 
 #                target            Nmap args (optional)
 scan = NmapScan('scanme.nmap.org', ['-Pn', '-F', '-T4' '-sV', '--script=banner'])
-
+~~~
+2. Access information about the scan
+~~~
 scan.command
 "/usr/bin/nmap -oA /tmp/rhw2r_q9 -Pn -F -T4 -sV --script=banner scanme.nmap.org"
 
@@ -37,7 +40,9 @@ scan.results.output_xml
 scan.results.etree
 # Python dictionary (converted from xml)
 scan.results.json
-
+~~~
+3. Access information about the hosts
+~~~
 for host in scan:
     host.status
     host.address
