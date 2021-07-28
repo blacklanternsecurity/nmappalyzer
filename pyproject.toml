@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "nmapper"
+version = "1.0.0"
+description = "Lighweight Nmap wrapper that doesn't try too hard"
+authors = ["TheTechromancer"]
+license = "GPL-3.0"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+xmltodict = "^0.12.0"
+lxml = "^4.6.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
