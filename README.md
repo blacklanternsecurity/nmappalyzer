@@ -3,6 +3,7 @@ A lightweight Python 3 Nmap wrapper that doesn't try too hard. Gracefully handle
 
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/blacklanternsecurity/nmapper/master/LICENSE)
 [![Python Version](https://img.shields.io/badge/python-3.6+-green)](https://www.python.org)
+![Build Status](https://github.com/blacklanternsecurity/nmapper/workflows/scan-test/badge.svg)
 
 ## Installation
 NOTE: Nmap must be installed.
