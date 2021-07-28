@@ -3,9 +3,9 @@
 import logging
 import unittest
 from .main import NmapScan, log
-logging.getLogger('nmapper').setLevel(logging.DEBUG)
+logging.getLogger('nmappalyzer').setLevel(logging.DEBUG)
 
-class TestNmapper(unittest.TestCase):
+class Testnmappalyzer(unittest.TestCase):
 
     def test_scan(self):
 

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "nmapper"
+name = "nmappalyzer"
 version = "1.0.0"
 description = "Lighweight Nmap wrapper that doesn't try too hard"
 authors = ["TheTechromancer"]

@@ -8,9 +8,9 @@ from shutil import which
 from pathlib import Path
 
 
-log = logging.getLogger('nmapper')
+log = logging.getLogger('nmappalyzer')
 console = logging.StreamHandler(stdout)
-logging.getLogger('nmapper').handlers.append(console)
+logging.getLogger('nmappalyzer').handlers.append(console)
 
 
 def is_iterable(i):
