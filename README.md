@@ -2,7 +2,7 @@
 A lightweight Python 3 Nmap wrapper that doesn't try too hard. Gracefully handles any Nmap command, providing full access to all output types (normal, greppable, xml), plus JSON!
 
 [![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/blacklanternsecurity/nmapper/master/LICENSE)
-[![Python Version](https://img.shields.io/badge/python-3.6+-green)](https://www.python.org)
+[![Python Version](https://img.shields.io/badge/python-3.6+-blue)](https://www.python.org)
 [![Build Status](https://github.com/blacklanternsecurity/nmapper/workflows/Nmapper%20Scan%20Test/badge.svg)](https://github.com/blacklanternsecurity/nmapper/actions/workflows/scan-test.yml")
 
 ## Installation
