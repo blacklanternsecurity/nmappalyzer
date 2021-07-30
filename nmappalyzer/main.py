@@ -9,8 +9,6 @@ from pathlib import Path
 
 
 log = logging.getLogger('nmappalyzer')
-console = logging.StreamHandler(stdout)
-logging.getLogger('nmappalyzer').handlers.append(console)
 
 
 def is_iterable(i):
@@ -69,8 +67,8 @@ class NmapScan:
                 log.error(f'Error executing nmap: {e}')
             finally:
                 if self._process is not None:
-                    self.stderr = getattr(self._process, 'stderr', '')
-                    self.stdout = getattr(self._process, 'stdout', '')
+                    self.stderr = getattr(self._process, 'stderr', '').decode('utf-8', errors='ignore')
+                    self.stdout = getattr(self._process, 'stdout', '').decode('utf-8', errors='ignore')
                     if self._process.returncode != 0:
                         log.error(f'Non-zero return code: {self._process.returncode}')
                         if self.stderr:
@@ -160,8 +158,8 @@ class NmapHost(str):
         self.open_ports = []
         self.closed_ports = []
         self.filtered_ports = []
-        for port in self.etree.iter('port'):
-            port_name = port.attrib.get('portid', '0') + '/' + port.attrib.get('protocol', 'tcp')
+        for port in self.etree.findall('ports/port'):
+            port_name = port.attrib.get('portid', '0') + '/' + port.attrib.get('protocol', 'tcp').lower()
             port_status = port.find('state').attrib.get('state', 'closed')
             if port_status in ('open', 'closed', 'filtered'):
                 getattr(self, f'{port_status}_ports').append(port_name)
