@@ -8,20 +8,20 @@ A lightweight Python 3 Nmap wrapper that doesn't try too hard. Gracefully handle
 
 ## Installation
 NOTE: Nmap must be installed.
-~~~
+~~~bash
 $ pip install nmappalyzer
 ~~~
 
 ## Usage
 1. Start the scan and wait for it to finish
-~~~
+~~~python
 from nmappalyzer import NmapScan
 
 #                target            Nmap args (optional)
 scan = NmapScan('scanme.nmap.org', ['-Pn', '-F', '-T4' '-sV', '--script=banner'])
 ~~~
 2. Access information about the scan
-~~~
+~~~python
 scan.command
 "/usr/bin/nmap -oA /tmp/rhw2r_q9 -Pn -F -T4 -sV --script=banner scanme.nmap.org"
 
@@ -42,7 +42,7 @@ scan.results.etree
 scan.results.json
 ~~~
 3. Access information about the hosts
-~~~
+~~~python
 for host in scan:
     host.status
     host.address
