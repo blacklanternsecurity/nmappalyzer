@@ -28,7 +28,7 @@ class NmapScan:
 
         # target hosts
         if is_iterable(targets):
-            self.targets = tuple(set([str(t).strip() for t in targets]))
+            self.targets = tuple(set([str(t).strip().lstrip('-') for t in targets]))
         else:
             self.targets = (str(targets).strip(),)
 

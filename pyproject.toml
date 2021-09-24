@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nmappalyzer"
-version = "1.0.1"
+version = "1.0.2"
 description = "Lighweight Nmap wrapper that doesn't try too hard"
 authors = ["TheTechromancer"]
 license = "GPL-3.0"
