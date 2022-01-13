@@ -67,8 +67,8 @@ class NmapScan:
                 log.error(f'Error executing nmap: {e}')
             finally:
                 if self._process is not None:
-                    self.stderr = getattr(self._process, 'stderr', '').decode('utf-8', errors='ignore')
-                    self.stdout = getattr(self._process, 'stdout', '').decode('utf-8', errors='ignore')
+                    self.stderr = getattr(self._process, 'stderr', b'').decode('utf-8', errors='ignore')
+                    self.stdout = getattr(self._process, 'stdout', b'').decode('utf-8', errors='ignore')
                     if self._process.returncode != 0:
                         log.error(f'Non-zero return code: {self._process.returncode}')
                         if self.stderr:
