@@ -1,6 +1,6 @@
 # nmappalyzer
 
-[![License](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://raw.githubusercontent.com/blacklanternsecurity/nmappalyzer/master/LICENSE)
+[![License](https://img.shields.io/badge/license-AGPLv3-blue.svg)](LICENSE)
 [![Python Version](https://img.shields.io/badge/python-3.6+-blue)](https://www.python.org)
 [![Build Status](https://github.com/blacklanternsecurity/nmappalyzer/workflows/Nmappalyzer%20Test%20Scan/badge.svg)](https://github.com/blacklanternsecurity/nmappalyzer/actions/workflows/scan-test.yml")
 

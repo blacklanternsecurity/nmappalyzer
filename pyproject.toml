@@ -3,7 +3,7 @@ name = "nmappalyzer"
 version = "1.0.3"
 description = "Lighweight Nmap wrapper that doesn't try too hard"
 authors = ["TheTechromancer"]
-license = "AGPL-3.0"
+license = "AGPL-3.0-or-later"
 
 [tool.poetry.dependencies]
 python = "^3.6"
